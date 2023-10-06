@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS file -->
+    <style>
+        /* Custom styles for services.html */
+        main {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('space-background.jpg'); /* Set the space background image */
+            background-size: cover;
+            line-height: 1.6;
+            animation: fadeIn 2s ease-in-out; /* Add a fade-in animation */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        header {
+            background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent dark background for the header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            animation: slideDown 1s ease-in-out; /* Add a slide-down animation */
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        /* Change the background color of the heading */
+        header h1 {
+            background-color: #009688; /* New background color for the heading */
+            padding: 10px; /* Adjust padding as needed */
+            border-radius: 5px; /* Add rounded corners */
+        }
+
+        nav ul {
+            list-style: none; /* Use 'none' instead of '2' for list-style */
+            display: flex;
+            background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent dark background for the navigation bar */
+            justify-content: center;
+            padding: 10px 0;
+            animation: slideUp 1s ease-in-out; /* Add a slide-up animation */
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        nav li {
+            margin: 0 15px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #1a1a1a; /* Dark text color on hover */
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the main content */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            animation: fadeIn 2s ease-in-out; /* Add a fade-in animation */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(26, 26, 26, 0.8); /* Semi-transparent dark background for the footer */
+            color: #fff;
+            animation: slideUp 1s ease-in-out; /* Add a slide-up animation */
+        }
+
+        .services-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            flex: 1;
+            background-color: rgba(0, 150, 136, 0.9); /* Semi-transparent teal background for the service boxes */
+            color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px;
+            text-align: center;
+            transition: transform 0.2s ease-in-out;
+            animation: slideRight 1s ease-in-out; /* Add a slide-right animation */
+        }
+
+        @keyframes slideRight {
+            from {
+                transform: translateX(100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        .service h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Services</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="services-container">
+            <!-- Service 1 -->
+            <a href="/service1" class="service">
+                <h2>Service 1</h2>
+                <p>Description of service 1.</p>
+            </a>
+
+            <!-- Service 2 -->
+            <a href="/service2" class="service">
+                <h2>Service 2</h2>
+                <p>Description of service 2.</p>
+            </a>
+
+            <!-- Service 3 -->
+            <a href="/service3" class="service">
+                <h2>Service 3</h2>
+                <p>Description of service 3.</p>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;  Pratham Kumar</p>
+    </footer>
+</body>
+</html>

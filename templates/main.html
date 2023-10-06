@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeOrg</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f2f2f2; /* Light gray background */
+            line-height: 1.6;
+            font-size: 16px;
+            margin: 0;
+        }
+
+        header {
+            background-color: #009688; /* Teal */
+            color: #fff; /* White text */
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            background-color: #1a1a1a; /* Dark gray */
+            color: #fff; /* White text */
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 48px; /* Larger font size for impact */
+            margin-bottom: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            background-color: #001f3f; /* Navy blue */
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav li {
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff; /* White text */
+            font-weight: bold;
+            font-size: 20px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #0074b8; /* Light blue on hover */
+        }
+
+        main {
+            background-color: #f9f9f9; /* Light gray background */
+            padding: 20px;
+            margin-top: 20px;
+            position: relative; /* Added for animations */
+        }
+
+        main h2 {
+            font-size: 28px; /* Increase heading font size */
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 18px; /* Slightly larger text */
+            line-height: 1.5; /* Improved line spacing */
+        }
+
+        /* Animation for the side of the page */
+        .animation-bar {
+            position: absolute;
+            top: 0;
+            left: -10px;
+            height: 100%;
+            width: 10px;
+            background: linear-gradient(to bottom, #009688, #0074b8);
+            animation: slide 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(10px);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #1a1a1a; /* Dark gray */
+            color: #fff; /* White text */
+        }
+
+        .circular-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto;
+            background-color: #fff; /* White background for the circular frame */
+        }
+
+        .circular-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 5px solid #fff; /* White border */
+            border-radius: 50%; /* Ensure the image stays within the circular frame */
+        }
+
+        .rectangle {
+            width: 48%;
+            background-color: #009688; /* Teal */
+            color: #fff; /* White text */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out; /* Add a hover effect */
+        }
+
+        .rectangle:hover {
+            transform: scale(1.05); /* Scale the element on hover */
+        }
+
+        .rectangle h3 {
+            margin-bottom: 10px;
+            font-size: 24px; /* Larger font size for headings */
+        }
+
+        .rectangle p {
+            margin-bottom: 10px;
+            font-size: 18px; /* Slightly larger font size for text */
+        }
+
+        .rectangle a {
+            color: #1a1a1a; /* Dark gray */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px; /* Slightly larger font size for links */
+        }
+
+        .rectangle a:hover {
+            color: #fff; /* White text on hover */
+            text-decoration: underline; /* Underline the link on hover */
+        }
+
+        /* Smaller social media icons */
+        .social-icons img {
+            width: 30px; /* Adjust the width as needed */
+            height: 30px; /* Adjust the height as needed */
+            margin: 0 10px; /* Add spacing between icons */
+        }
+      
+        .side-divider {
+            position: absolute;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background: linear-gradient(to bottom, #009688, #0074b8);
+            z-index: 999; /* Ensure it's on top of other elements */
+        }
+
+        .left-divider {
+            left: 0;
+        }
+
+        .right-divider {
+            right: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to CodeOrg</h1>
+        <div class="circular-image">
+            <img src="https://pbs.twimg.com/media/DopA_1gVAAAVX7q.jpg" alt="CodeOrg Image">
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/blog">Blog</a></li> 
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Explore Our Main Content</h2>
+        <div class="rectangle" onclick="window.location.href='/products';">
+            <h3>Discover Our Products</h3>
+            <p>Explore our high-quality products and find great deals.</p>
+            <a href="/products">Shop Now</a>
+        </div>
+        
+        <div class="side-divider left-divider"></div>
+        <div class="side-divider right-divider"></div>
+        
+        <!-- Add a Sign Out button -->
+        <form method="post" action="/signout" class="mb-2">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Sign Out</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 CodeOrg</p>
+        <div class="social-icons">
+            <a href="#"><img src="https://www.facebook.com/images/fb_icon_325x325.png" alt="fb-icon"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/225px-Instagram_logo_2022.svg.png" alt="insta-icon"></a>
+            <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/768px-Logo_of_Twitter.svg.png?20220821125553" alt="twitter-icon"></a>
+            <a href="#"><img src="https://p1.hiclipart.com/preview/501/124/941/arrow-graphic-design-youtube-logo-youtube-play-buttons-symbol-red-material-property-rectangle-png-clipart.jpg" alt="yt-icon"></a>
+        </div>
+    </footer>
+</body>
+</html>

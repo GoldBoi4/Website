@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog / Helping content</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5; /* Light gray background */
+            line-height: 1.6;
+            font-size: 16px; /* Set a base font size for better readability */
+            margin: 0; /* Reset body margin */
+            color: #333; /* Dark gray text color */
+        }
+
+        header {
+            background-color: #009688; /* Teal background color for the header */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            background-color: #00665e; /* Slightly darker teal for heading background */
+            padding: 15px;
+            border-radius: 5px; /* Add rounded corners */
+            font-size: 36px;
+            margin-bottom: 20px; /* Increase margin for better separation */
+        }
+
+        nav ul {
+            list-style: none; /* Use 'none' instead of '2' for list-style */
+            display: flex;
+            background-color: #009688; /* Teal background color for the navigation bar */
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav li {
+            margin: 0 20px; /* Increase spacing between navigation items */
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #00665e; /* Slightly darker teal for text color on hover */
+        }
+
+        main {
+            max-width: 1000px; /* Increase the maximum width for better desktop presentation */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px; /* Increase border radius for a softer look */
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #009688; /* Teal footer background */
+            color: #fff;
+        }
+
+        /* New Blog Section Styles */
+        .blog {
+            margin-top: 20px;
+        }
+
+        .blog h2 {
+            margin-bottom: 20px;
+            color: #009688; /* Teal heading color */
+        }
+
+        .blog-post {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+        }
+
+        .blog-post h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333; /* Dark gray heading color */
+        }
+
+        .blog-post p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .blog-post a {
+            display: inline-block;
+            text-decoration: none;
+            color: #009688;
+            font-weight: bold;
+            margin-top: 10px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        .blog-post a:hover {
+            border-color: #009688; /* Teal border color on hover */
+        }
+
+        /* Added some hover effects for better interactivity */
+        .blog-post:hover {
+            transform: translateY(-5px); /* Lift on hover */
+            transition: transform 0.2s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+        }
+
+        /* Attractive Content Styling */
+        .attractive-content {
+            background-color: #f9f9f9; /* Light gray background for attractive content */
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .attractive-content h2 {
+            color: #009688; /* Teal heading color */
+        }
+
+        .attractive-content p {
+            color: #555; /* Gray text color */
+        }
+
+        /* Motivational Quotes Section */
+        .motivational-quotes {
+            text-align: center;
+            margin-top: 20px;
+            background-color: #009688; /* Teal background color */
+            padding: 30px 0;
+            border-radius: 10px;
+        }
+
+        .motivational-quotes h2 {
+            margin-bottom: 20px;
+            color: #fff; /* White heading color */
+        }
+
+        .motivational-quote {
+            background-color: #fff; /* White background color */
+            color: #009688; /* Teal text color */
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease-in-out; /* Add hover effect */
+            cursor: pointer; /* Add cursor pointer */
+        }
+
+        /* Added some bottom margin for the last motivational quote */
+        .motivational-quote:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Hover animation for motivational quotes */
+        .motivational-quote:hover {
+            transform: scale(1.05); /* Scale up on hover */
+            background-color: #009688; /* Teal background color on hover */
+            color: #fff; /* White text color on hover */
+        }
+
+        /* Contact Info Styling */
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 18px; /* Slightly larger font size for contact info */
+            color: #009688; /* Teal text color */
+        }
+
+        /* Photo Styling */
+        .circular-image {
+            width: 200px; /* Increase image size */
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px; /* Added some bottom margin */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add shadow */
+        }
+
+        /* Style for the circular image */
+        .circular-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: 4px solid #fff; /* Add a white border around the image */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog / Helping </h1>
+        <div class="circular-image">
+            <img src="https://media.tenor.com/CPS9koSk9I8AAAAC/anime-cool.gif" alt="Your Photo">
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="/main">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="contact-info">
+            <p>Email: <span style="color: #009688;">companyhelping540@gmail.com</span></p>
+            <p>Phone: <span style="color: #009688;">+91 9417869269</span></p>
+        </div>
+
+        <!-- Motivational Quotes Section -->
+        <div class="motivational-quotes">
+            <h2>Motivational Quotes</h2>
+            <div class="motivational-quote">
+                <p>"Success is not final, failure is not fatal: It is the courage to continue that counts." - Winston Churchill</p>
+            </div>
+            <div class="motivational-quote">
+                <p>"The only limit to our realization of tomorrow will be our doubts of today." - Franklin D. Roosevelt</p>
+            </div>
+            <div class="motivational-quote">
+                <p>"Your time is limited, don't waste it living someone else's life." - Steve Jobs</p>
+            </div>
+        </div>
+
+        <!-- Attractive Content Section -->
+        <div class="attractive-content">
+            <h2>Explore Our Latest Insights</h2>
+            <p>Welcome to our blog where we share valuable insights and knowledge on a variety of topics. Discover the latest trends, tips, and ideas to enhance your life and career.</p>
+            <a href="/blog">Read Our Blog</a>
+        </div>
+
+
+    <footer>
+        <p>&copy; Pratham Kumar</p>
+    </footer>
+</body>
+</html>
